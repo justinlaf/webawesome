@@ -76,7 +76,7 @@ export default class WaCheckbox extends WebAwesomeFormAssociatedElement {
   @property() title = ''; // make reactive to pass through
 
   /** The name of the checkbox, submitted as a name/value pair with form data. */
-  @property({ reflect: true, useDefault: true }) name = null;
+  @property({ reflect: true }) name = null;
 
   private _value: string | null = this.getAttribute('value') ?? null;
 
@@ -85,13 +85,13 @@ export default class WaCheckbox extends WebAwesomeFormAssociatedElement {
     return this._value ?? 'on';
   }
 
-  @property({ reflect: true, useDefault: true })
+  @property({ reflect: true })
   set value(val: string | null) {
     this._value = val;
   }
 
   /** The checkbox's size. */
-  @property({ reflect: true, useDefault: true }) size: 'xs' | 's' | 'm' | 'l' | 'xl' | 'small' | 'medium' | 'large' = 'm';
+  @property({ reflect: true }) size: 'xs' | 's' | 'm' | 'l' | 'xl' | 'small' | 'medium' | 'large' = 'm';
 
   @watch('size')
   handleSizeChange() {

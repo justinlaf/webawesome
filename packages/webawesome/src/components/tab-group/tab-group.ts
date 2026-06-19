@@ -67,7 +67,7 @@ export default class WaTabGroup extends WebAwesomeElement {
   @state() private hasScrollControls = false;
 
   /** Sets the active tab. */
-  @property({ reflect: true, useDefault: true }) active = '';
+  @property({ reflect: true }) active = '';
 
   /** The placement of the tabs. */
   @property() placement: 'top' | 'bottom' | 'start' | 'end' = 'top';
